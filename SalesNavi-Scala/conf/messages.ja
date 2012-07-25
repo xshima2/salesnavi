@@ -1,0 +1,31 @@
+# Default messages
+
+# --- Constraints
+constraint.required=必須
+constraint.min=最小値: {0}
+constraint.max=最大値: {0}
+constraint.minLength=最小桁数: {0}
+constraint.maxLength=最大桁数: {0}
+constraint.email=Eメール
+
+# --- Formats
+format.date=日付 (''{0}'')
+format.numeric=数値
+
+# --- Errors
+error.invalid=不正な値が入力されています
+error.required=この項目は必須です
+error.number=数値形式のみ入力可能です
+error.min={0}以上の値を入力してください
+error.max={0}以下の値を入力してください
+error.minLength={0}文字以上で入力してください
+error.maxLength={0}文字以下で入力してください
+error.email=Eメールアドレスが不正です
+error.pattern={0}形式で入力してください
+
+login.title=ログイン
+
+btn.login=ログイン
+
+uid=ユーザID
+pass=パスワード
