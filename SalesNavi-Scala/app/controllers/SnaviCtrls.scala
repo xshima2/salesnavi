@@ -12,12 +12,13 @@ import play.api.i18n.Lang
 trait SnaviCtrls extends Controller {
 		def SnaviAction(f: Request[AnyContent] => PlainResult): Action[AnyContent] = {
 			Action { request =>
-				f(request).withCookies(
-					request.cookies.get("SNAVI_STYLE") match {
-						case None => Cookie("SNAVI_STYLE", "black-tie")
-						case Some(cookie) => cookie
-					}
-				)
+//				f(request).withCookies(
+//					request.cookies.get("SNAVI_STYLE") match {
+//						case None => Cookie("SNAVI_STYLE", "black-tie")
+//						case Some(cookie) => cookie
+//					}
+//				)
+				f(request)
 			}
 		}
 
