@@ -23,6 +23,14 @@ error.maxLength=Maximum length is {0}
 error.email=Valid email required
 error.pattern=Must satisfy {0}
 
+# --- Hedar
+head.lang.title=Language
+head.lang.en=English
+head.lang.ja=Japanese
+
+head.style.title=Style
+
+# --- Disp
 login.title=Login
 
 btn.login=login

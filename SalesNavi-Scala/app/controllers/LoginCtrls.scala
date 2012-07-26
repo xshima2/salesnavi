@@ -8,20 +8,25 @@ import play.api.data.Forms._
 /** ログインの際に使用するユーザ情報。*/
 case class User(uid: String, pass: String)
 
-object LoginCtrls extends Controller {
+/**
+ * ログイン画面用のコントローラ。
+ *
+ * @author yoshiteru.shimamura
+ */
+object LoginCtrls extends SnaviCtrls {
 	val userForm = Form(
 			mapping(
-					"uid" -> nonEmptyText(1, 8),
-					"pass" -> nonEmptyText(1, 8)
+					"uid" -> nonEmptyText(0, 8),
+					"pass" -> nonEmptyText(0, 8)
 			)(User.apply)(User.unapply)
 	)
 
-	def index = Action { implicit request =>
+	def index = SnaviAction { implicit request =>
 		val user = User("", "")
 		Ok(views.html.index(userForm.fill(user)))
 	}
 
-	def login = Action { implicit request =>
+	def login = SnaviAction { implicit request =>
 		userForm.bindFromRequest.fold(
 				errors => BadRequest(views.html.index(errors)),
 				user => {

@@ -1,8 +1,39 @@
-@()
+@()(implicit lang: play.api.i18n.Lang)
+@import play.api.i18n.Messages
+@import play.api.Play._
 <div class="navbar">
 	<div class="navbar-inner">
-		<a class="brand" href="#">Sales Navi</a>
 		<div class="container">
+			<a class="brand" href="#">Sales Navi</a>
+			<ul class="nav pull-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-globe"></i>@Messages("head.lang.title")<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+@for(langVal <- Lang.availables) {
+						<li><a href="javascript: snavi.lang.change('@(langVal.language)')">@Messages("head.lang." + langVal.language)</a></li>
+}
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-star-empty"></i>@Messages("head.style.title")<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="javascript: snavi.style.change('black-tie')">black-tie</a></li>
+						<li><a href="javascript: snavi.style.change('cupertino')">cupertino</a></li>
+						<li><a href="javascript: snavi.style.change('dark-hive')">dark-hive</a></li>
+						<li><a href="javascript: snavi.style.change('dot-luv')">dot-luv</a></li>
+						<li><a href="javascript: snavi.style.change('flick')">flick</a></li>
+						<li><a href="javascript: snavi.style.change('le-frog')">le-frog</a></li>
+						<li><a href="javascript: snavi.style.change('overcast')">overcast</a></li>
+						<li><a href="javascript: snavi.style.change('pepper-grinder')">pepper-grinder</a></li>
+						<li><a href="javascript: snavi.style.change('redmond')">redmond</a></li>
+						<li><a href="javascript: snavi.style.change('smoothness')">smoothness</a></li>
+						<li><a href="javascript: snavi.style.change('start')">start</a></li>
+						<li><a href="javascript: snavi.style.change('sunny')">sunny</a></li>
+						<li><a href="javascript: snavi.style.change('ui-darkness')">ui-darkness</a></li>
+						<li><a href="javascript: snavi.style.change('ui-lightness')">ui-lightness</a></li>
+					</ul>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>

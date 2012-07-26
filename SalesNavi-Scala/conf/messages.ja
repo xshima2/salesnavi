@@ -23,6 +23,14 @@ error.maxLength={0}文字以下で入力してください
 error.email=Eメールアドレスが不正です
 error.pattern={0}形式で入力してください
 
+# --- Header
+head.lang.title=言語
+head.lang.en=英語
+head.lang.ja=日本語
+
+head.style.title=Style
+
+# --- 画面
 login.title=ログイン
 
 btn.login=ログイン
