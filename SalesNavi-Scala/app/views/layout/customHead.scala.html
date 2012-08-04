@@ -1,7 +1,5 @@
-@(pid: String)(implicit lang: play.api.i18n.Lang, request: play.api.mvc.RequestHeader)
-@import play.api.i18n.Messages
+@()(implicit lang: play.api.i18n.Lang, request: play.api.mvc.RequestHeader)
 <meta charset="utf-8">
-<title>SalesNavi - @Messages(pid + ".title")</title>
 <link rel='stylesheet' href='@routes.Assets.at("bootstrap/css/bootstrap-responsive.min.css")' />
 <link rel='stylesheet' href='@routes.Assets.at("bootstrap/css/bootstrap.min.css")' />
 @if(request.cookies.get("SNAVI_STYLE") != None) {
@@ -19,6 +17,7 @@
 <script src='@routes.Assets.at("bootstrap/js/bootstrap.min.js")' type='text/javascript'></script>
 <script src='@routes.Assets.at("jquery/js/jquery-ui-1.8.22.custom.min.js")' type='text/javascript'></script>
 <script src='@routes.Assets.at("jquery/js/jquery.cookie.js")' type='text/javascript'></script>
+<script src='@routes.Assets.at("jquery/js/jquery.json-2.3.js")' type='text/javascript'></script>
 <script src='@routes.Assets.at("jquery/js/jquery.pjax.js")' type='text/javascript'></script>
 <script src='@routes.Assets.at("jquery/js/jquery.showLoading.min.js")' type='text/javascript'></script>
 <script src='@routes.Assets.at("js/snavi.js")' type='text/javascript'></script>

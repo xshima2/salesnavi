@@ -1,0 +1,15 @@
+@(loginForm: Form[controllers.User])(implicit lang: play.api.i18n.Lang, request: play.api.mvc.RequestHeader)
+@import play.api.i18n.Messages
+@import helper._
+@import helper.noinfo._
+@layout.simple("top") {@* Head *@
+} {@* Body *@
+<div class="row-fluid"><div class="span2"></div><div class="span8 ui-widget-header"><h3>@Messages("top.title")</h3></div></div>
+
+<div class="row-fluid">
+<div class="span2"></div>
+<div class="span8 well">
+てすと
+</div>
+</div>
+}

@@ -2,8 +2,11 @@ package controllers
 
 import play.api._
 import play.api.mvc._
+import play.api.libs.json._
 import play.api.data._
 import play.api.data.Forms._
+import com.codahale.jerkson.Json._
+import play.api.libs.json.JsValue
 
 /** ログインの際に使用するユーザ情報。*/
 case class User(uid: String, pass: String)
@@ -15,23 +18,20 @@ case class User(uid: String, pass: String)
  */
 object LoginCtrls extends SnaviCtrls {
 	val userForm = Form(
-			mapping(
-					"uid" -> nonEmptyText(0, 8),
-					"pass" -> nonEmptyText(0, 8)
-			)(User.apply)(User.unapply)
-	)
+		mapping(
+			"uid" -> nonEmptyText(0, 8),
+			"pass" -> nonEmptyText(0, 8))(User.apply)(User.unapply))
 
-	def index = SnaviAction { implicit request =>
+	def index = Action { implicit request =>
 		val user = User("", "")
 		Ok(views.html.index(userForm.fill(user)))
 	}
 
-	def login = SnaviAction { implicit request =>
+	def login = Action { implicit request =>
 		userForm.bindFromRequest.fold(
-				errors => BadRequest(views.html.index(errors)),
-				user => {
-					Ok(views.html.index(userForm.fill(user)))
-				}
-		)
+			errors => BadRequest(views.html.index(errors)),
+			user => {
+				Redirect(routes.TopCtrls.index)
+			})
 	}
 }

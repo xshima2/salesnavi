@@ -10,7 +10,7 @@
 <div class="span2"></div>
 <div class="span8 well">
 <fieldset>
-	@helper.form(action = routes.LoginCtrls.login) {
+	@helper.form(action = routes.LoginCtrls.login, 'id -> "login-form") {
 		@inputText(loginForm("uid"))
 		@inputPassword(loginForm("pass"))
 		<input type='submit' class='btn btn-primary' value='@Messages("btn.login")'/>
@@ -18,4 +18,12 @@
 </fieldset>
 </div>
 </div>
+<script>
+$(document).ready(function() {
+	$('#login-form').submit(function() {
+		snavi.ajax.post('login-form', 'contains-body');
+		return false;
+	});
+});
+</script>
 }

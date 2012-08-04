@@ -1,8 +1,15 @@
 @(pid: String = "")(head: => Html)(body: => Html)(implicit lang: play.api.i18n.Lang, request: play.api.mvc.RequestHeader)
+@import play.api.i18n.Messages
+@import helper._
+@if(request.headers.keys("X-PJAX")) {
+<title>SalesNavi - @Messages(pid + ".title")</title>
+@body
+} else {
 <!DOCTYPE html>
 <html>
 <head>
-@customHead(pid)
+@customHead()
+<title>SalesNavi - @Messages(pid + ".title")</title>
 </head>
 <body>
 @navbar()
@@ -11,3 +18,4 @@
 </div>
 </body>
 </html>
+}
