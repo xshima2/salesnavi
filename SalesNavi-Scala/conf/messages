@@ -24,6 +24,10 @@ error.email=Valid email required
 error.pattern=Must satisfy {0}
 
 # --- Hedar
+head.menu.mst=Master
+head.menu.mst.company=Company
+head.menu.mst.user=User
+
 head.lang.title=Language
 head.lang.en=English
 head.lang.ja=Japanese
@@ -32,8 +36,10 @@ head.style.title=Style
 
 # --- Disp
 login.title=Login
+login.signup=signup
+login.btn=login
 
-btn.login=login
+user_add.title=User Regist
 
 uid=User Id
 pass=Password

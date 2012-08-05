@@ -24,6 +24,10 @@ error.email=Eメールアドレスが不正です
 error.pattern={0}形式で入力してください
 
 # --- Header
+head.menu.mst=マスタ管理
+head.menu.mst.company=会社マスタ
+head.menu.mst.user=ユーザマスタ
+
 head.lang.title=言語
 head.lang.en=英語
 head.lang.ja=日本語
@@ -32,8 +36,10 @@ head.style.title=Style
 
 # --- 画面
 login.title=ログイン
+login.signup=サインアップ
+login.btn=ログイン
 
-btn.login=ログイン
+user_add.title=ユーザ登録
 
 uid=ユーザID
 pass=パスワード
