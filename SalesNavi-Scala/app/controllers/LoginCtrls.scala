@@ -31,6 +31,7 @@ object LoginCtrls extends SnaviCtrls {
 		userForm.bindFromRequest.fold(
 			errors => BadRequest(views.html.index(errors)),
 			user => {
+				Logger.info("login:" + user.uid)
 				Redirect(routes.TopCtrls.index)
 			})
 	}
