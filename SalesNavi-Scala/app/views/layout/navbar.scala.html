@@ -6,7 +6,7 @@
 <div class="navbar">
 	<div class="navbar-inner">
 		<div class="container">
-			<a class="brand" href="#">Sales Navi</a>
+			<a class="brand" href="#" data-pjax="#contains-body">Sales Navi</a>
 
 			<ul class="nav nav-pills">
 				<li class="active"></li>
@@ -16,8 +16,8 @@
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="@routes.CompanyCtrls.index">@Messages("head.menu.mst.company")</a></li>
-						<li><a href="@routes.UserCtrls.index">@Messages("head.menu.mst.user")</a></li>
+						<li><a href="@routes.CompanyCtrls.index" data-pjax="#contains-body">@Messages("head.menu.mst.company")</a></li>
+						<li><a href="@routes.UserCtrls.index" data-pjax="#contains-body">@Messages("head.menu.mst.user")</a></li>
 					</ul>
 				</li>
 			</ul>

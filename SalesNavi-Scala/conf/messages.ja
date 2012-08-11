@@ -39,6 +39,8 @@ login.title=ログイン
 login.signup=サインアップ
 login.btn=ログイン
 
+company.add.title=会社マスタメンテナンス-登録-
+
 user_add.title=ユーザ登録
 
 uid=ユーザID

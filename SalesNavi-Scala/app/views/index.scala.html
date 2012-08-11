@@ -4,11 +4,11 @@
 @import helper.noinfo._
 @layout.simple("login") {@* Head *@
 } {@* Body *@
-<div class="row-fluid"><div class="span2"></div><div class="span8 ui-widget-header"><h3>@Messages("login.title")</h3></div></div>
+<div class="row-fluid"><div class="span1"></div><div class="span10 ui-widget-header"><h3>@Messages("login.title")</h3></div></div>
 
 <div class="row-fluid">
-<div class="span2"></div>
-<div class="span8 well">
+<div class="span1"></div>
+<div class="span10 well">
 <fieldset>
 	@helper.form(action = routes.LoginCtrls.login, 'id -> "login-form") {
 		@inputText(loginForm("uid"))
